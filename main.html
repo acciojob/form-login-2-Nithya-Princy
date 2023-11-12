@@ -7,12 +7,28 @@
 </head>
 
 <body>
+	<form id="myForm" method="post">
 	First Name: <input type="text" id="firstName" name="First Name"><br>
 	Last Name: <input type="text" id="lastName" name="Last Name"><br>
 	Phone Number: <input type="tel" id="phoneNumbe" name="Phone Number"><br>
 	Email ID: <input type="email" id="email" name="Email ID"><br>
 	<input type="submit" value="Submit" onclick="showFormData()">
-    <script type="text/javascript" src="./script.js">
+		</form>
+	
+    <script >
+		function showFormData() {
+	var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var phoneNumber = document.getElementById('phoneNumber').value;
+    var email = document.getElementById('email').value;
+
+    var formInfo = "First Name: " + firstName + "\n" +
+		"Last Name: " + lastName + "\n" +
+        "Phone Number: " + phoneNumber + "\n" +
+        "Email ID: " + email;
+	alert(formInfo);
+}
+
 </script>
 
 </body>
